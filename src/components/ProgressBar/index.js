@@ -1,5 +1,5 @@
 function ProgressBar() {
-  return <>P</>;
+  return <></>;
 }
 
 export default ProgressBar;
