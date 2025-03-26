@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import styled from 'styled-components';
 
 import ProgressBar from '../../components/ProgressBar';
@@ -5,10 +6,12 @@ import QuestionBox from '../../components/QuestionBox';
 
 function SurveyPage() {
   return (
-    <SurveyPageWrapper>
-      <ProgressBar />
-      <QuestionBox />
-    </SurveyPageWrapper>
+    <Suspense fallback={<div>loading...</div>}>
+      <SurveyPageWrapper>
+        <ProgressBar />
+        <QuestionBox />
+      </SurveyPageWrapper>
+    </Suspense>
   );
 }
 
