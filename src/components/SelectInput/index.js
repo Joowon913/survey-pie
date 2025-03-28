@@ -3,18 +3,11 @@ import styled from 'styled-components';
 function Item({ children, onChange }) {
   return (
     <ItemWrapper>
-      <div>
-        <label>
-          <input
-            type="checkbox"
-            onChange={() => {
-              console.log('checked');
-            }}
-          />
-          <span />
-          <div>{children}</div>
-        </label>
-      </div>
+      <label>
+        <input type="checkbox" onChange={onChange} />
+        <span />
+        <div>{children}</div>
+      </label>
     </ItemWrapper>
   );
 }

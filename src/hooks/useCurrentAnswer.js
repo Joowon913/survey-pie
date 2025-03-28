@@ -8,14 +8,15 @@ function useCurrentAnswer() {
   const [answers, setAnswers] = useRecoilState(answersState);
 
   const answer = answers[step];
-  const setAnswer = (newAnswers) => {
+  const setAnswer = (newAnswer) => {
     setAnswers((answers) => {
       const newAnswers = [...answers];
-      newAnswers[step] = newAnswers;
+      newAnswers[step] = newAnswer;
 
       return newAnswers;
     });
   };
+
   return [answer, setAnswer];
 }
 
